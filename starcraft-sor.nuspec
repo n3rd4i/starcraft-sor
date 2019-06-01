@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>starcraft-sor</id>
+    <version>4.7.0</version>
+    <title>starcraft-sor (Install)</title>
+    <authors>nasaman12</authors>
+    <projectUrl>https://www.moddb.com/mods/starcraftsor/downloads/starcraft-sor-47-update</projectUrl>
+    <tags>starcraft-sor starcraft</tags>
+    <summary>Starcraft SOR MOD</summary>
+    <description>
+
+Starcraft SOR MOD, It is a large mode updated for a long time. It is not possible to run in the remaster. You must either downgrade to 1.16.1 or install and run the Rib version. The 4.5.2 Zip file contains the 1.16.1 patch file
+
+    </description>
+    <dependencies>
+      <dependency id="starcraft" version="1.16.1" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

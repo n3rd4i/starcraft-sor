@@ -1,0 +1,18 @@
+{
+	// See https://go.microsoft.com/fwlink/?LinkId=733558
+	// for the documentation about the tasks.json format
+	"version": "2.0.0",
+	"problemMatcher":[],
+	"tasks": [
+		{
+			"label": "admin",
+			"type": "shell",
+			"command": "powershell -c start -verb runas -argumentlist '/k pushd %cd% ^&^& powershell' cmd"	
+		},
+		{
+			"label": "install",
+			"type": "shell",
+			"command": "powershell -c start -verb runas -argumentlist '/k pushd %cd% ^&^& powershell choco install $(split-path -leaf $pwd) -f -s .' cmd"	
+		}
+	]
+}
