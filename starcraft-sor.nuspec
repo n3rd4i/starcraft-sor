@@ -2,10 +2,17 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>starcraft-sor</id>
-    <version>4.7.0</version>
+    <version>4.7.0.20190610</version>
+    <packageSourceUrl>https://github.com/n3rd4i/starcraft-sor.git</packageSourceUrl>
     <title>starcraft-sor (Install)</title>
     <authors>nasaman12</authors>
+    <iconUrl>https://media.moddb.com/images/games/1/1/29/icon.gif</iconUrl>
     <projectUrl>https://www.moddb.com/mods/starcraftsor/downloads/starcraft-sor-47-update</projectUrl>
+    <licenseUrl>https://www.moddb.com/terms-of-use</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <docsUrl>https://www.moddb.com/mods/starcraftsor</docsUrl>
+    <mailingListUrl>https://www.moddb.com/mods/starcraftsor</mailingListUrl>
+    <bugTrackerUrl>https://www.moddb.com/mods/starcraftsor</bugTrackerUrl>
     <tags>starcraft-sor starcraft</tags>
     <summary>Starcraft SOR MOD</summary>
     <description>
@@ -15,6 +22,7 @@ Starcraft SOR MOD, It is a large mode updated for a long time. It is not possibl
     </description>
     <dependencies>
       <dependency id="starcraft" version="1.16.1" />
+      <dependency id="moddb.extension" version="0.1.0" />
     </dependencies>
   </metadata>
   <files>

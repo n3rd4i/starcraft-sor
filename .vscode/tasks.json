@@ -12,7 +12,7 @@
 		{
 			"label": "install",
 			"type": "shell",
-			"command": "powershell -c start -verb runas -argumentlist '/k pushd %cd% ^&^& powershell choco install $(split-path -leaf $pwd) -f -s .' cmd"	
+			"command": "powershell -c start -verb runas -argumentlist '/k pushd %cd% ^&^& powershell choco install $(split-path -leaf $pwd) -fdv -s .' cmd"	
 		}
 	]
 }

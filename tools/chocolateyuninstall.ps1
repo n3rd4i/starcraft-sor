@@ -1,10 +1,6 @@
-﻿$ErrorActionPreference = 'Stop'; # stop on all errors
-$installLocation = "$ENV:LocalAppData\Programs\StarCraft SOR"
-$shortcutPath = "$ENV:UserProfile\Desktop\SC SOR.lnk"
-$shortcutAIPath = "$ENV:UserProfile\Desktop\SC SOR AI.lnk"
-$starcraftLocation = "$ENV:LocalAppData\Programs\StarCraft"
-$SOR_EXE = "SOR 4.7.exe"
-$SOR_AI_EXE = "SOR 4.7-Ai.exe"
+﻿$toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+. "$toolsDir\commonEnv.ps1"
+. "$toolsDir\dependenciesEnv.ps1"
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
@@ -30,8 +26,9 @@ if ($key.Count -eq 1) {
   Write-Warning "Please alert package maintainer the following keys were matched:"
   $key | % {Write-Warning "- $($_.DisplayName)"}
 }
-Remove-Item "$starcraftLocation\$SOR_EXE" -force
-Remove-Item "$starcraftLocation\$SOR_AI_EXE" -force
-Remove-Item $shortcutPath -force
-Remove-Item $shortcutAIPath -force
-Remove-Item $installLocation -recurse -force
+Remove-Item "$starCraftDir\$SC_WMODE" -force
+Remove-Item "$starCraftDir\$SC_WMODE_FIX" -force
+Remove-Item "$lnkDesktop" -force
+Remove-Item "$SOR_MAPS" -recurse -force
+Remove-Item "$startMenuDir" -recurse -force
+Remove-Item "$installLocation" -recurse -force
